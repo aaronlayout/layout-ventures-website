@@ -292,7 +292,7 @@ body {
     background: rgba(0, 163, 184, 0.97);
     color: var(--white);
     padding: 30px;
-    border-radius: 12px;
+    border-radius: 17px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -356,9 +356,6 @@ body {
 
 .portfolio-item:hover .exit-badge {
     opacity: 0;
-}
-    line-height: 1.5;
-    color: var(--white);
 }
 
 /* Team Section */
@@ -553,6 +550,10 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
     
+    .portfolio-grid.prior-investments {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
     .nav {
         gap: 25px;
     }
@@ -659,31 +660,164 @@ body {
         font-weight: 400;
     }
     
+    .pillars {
+        padding: 60px 0;
+    }
+    
+    .pillar-card {
+        padding: 35px 30px;
+    }
+    
+    .portfolio {
+        padding: 60px 0;
+    }
+    
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 15px;
+    }
+    
+    .portfolio-item {
+        min-height: 140px;
+        padding: 20px 15px;
+        border-width: 2px;
+        border-radius: 15px;
+    }
+    
+    .portfolio-logo img {
+        max-width: 85%;
+        max-height: 85%;
+    }
+    
+    .portfolio-overlay {
+        padding: 15px;
+        border-radius: 13px;
+    }
+    
+    .company-description {
+        font-size: 12px;
+        line-height: 1.4;
+        margin-bottom: 12px;
+    }
+    
+    .website-link {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .website-link svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .exit-badge {
+        top: 8px;
+        right: 8px;
+        padding: 3px 8px;
+        font-size: 9px;
+    }
+    
+    /* Prior investments specific mobile styling */
+    .portfolio-grid.prior-investments {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .portfolio-grid.prior-investments .portfolio-item {
+        min-height: 120px;
+        padding: 18px 12px;
+    }
+    
+    .portfolio-grid.prior-investments .portfolio-logo img {
+        max-width: 75%;
+        max-height: 75%;
+    }
+    
+    .portfolio-grid.prior-investments .company-description {
+        font-size: 11px;
+        line-height: 1.35;
     }
     
     .section-title {
         font-size: 32px;
+        margin-bottom: 40px;
+    }
+    
+    .subsection-title {
+        font-size: 18px;
+        margin: 50px 0 30px;
+    }
+    
+    .team {
+        padding: 80px 0 60px;
+    }
+    
+    .team .section-title {
+        margin-bottom: 40px;
+    }
+    
+    .team-grid {
+        gap: 40px;
+    }
+    
+    .team-member {
+        padding: 35px 30px 30px;
     }
     
     .team-photo {
         width: 150px;
         height: 150px;
+        margin-bottom: 20px;
+    }
+    
+    .team-name {
+        font-size: 22px;
+    }
+    
+    .team-title {
+        font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
     .portfolio-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .nav {
         gap: 15px;
     }
     
+    .portfolio-grid.prior-investments {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-item {
+        min-height: 160px;
+    }
+    
+    .portfolio-grid.prior-investments .portfolio-item {
+        min-height: 140px;
+    }
+    
+    .nav {
+        gap: 12px;
+    }
+    
     .nav-link {
-        font-size: 12px;
+        font-size: 9px;
+    }
+    
+    .hero-title {
+        font-size: 26px;
+    }
+    
+    .hero-subtitle {
+        font-size: 15px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .subsection-title {
+        font-size: 16px;
     }
 }
