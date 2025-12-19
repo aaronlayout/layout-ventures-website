@@ -25,24 +25,36 @@ function initTextReveal() {
     const heroTitle = document.querySelector('.hero-title');
     if (!heroTitle) return;
 
-    const text = heroTitle.innerHTML;
-    const words = text.split(/(<br>|\s+)/).filter(word => word.trim() !== '');
+    const html = heroTitle.innerHTML;
+    // Split by <br> first, then by spaces within each line
+    const lines = html.split(/<br\s*\/?>/i);
 
     heroTitle.innerHTML = '';
     heroTitle.style.opacity = '1';
     heroTitle.style.transform = 'none';
 
-    words.forEach((word, index) => {
-        if (word === '<br>') {
-            heroTitle.appendChild(document.createElement('br'));
-        } else {
+    let wordIndex = 0;
+
+    lines.forEach((line, lineIndex) => {
+        const words = line.trim().split(/\s+/).filter(word => word !== '');
+
+        words.forEach((word, i) => {
             const wrapper = document.createElement('span');
             wrapper.className = 'word-reveal';
+            wrapper.style.display = 'inline-block';
+            wrapper.style.marginRight = '0.3em';
+
             const inner = document.createElement('span');
-            inner.textContent = word + ' ';
-            inner.style.animationDelay = `${index * 0.05}s`;
+            inner.textContent = word;
+            inner.style.animationDelay = `${wordIndex * 0.06}s`;
             wrapper.appendChild(inner);
             heroTitle.appendChild(wrapper);
+            wordIndex++;
+        });
+
+        // Add line break between lines (but not after the last line)
+        if (lineIndex < lines.length - 1) {
+            heroTitle.appendChild(document.createElement('br'));
         }
     });
 }
@@ -301,6 +313,39 @@ if (mobileMenuToggle) {
             nav.classList.remove('active');
             document.body.style.overflow = '';
         });
+    });
+}
+
+// =============================================
+// Mobile Portfolio Tap to Reveal
+// =============================================
+if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    portfolioItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            // Don't trigger if clicking a link
+            if (e.target.closest('a')) return;
+
+            // Close all other items
+            portfolioItems.forEach(other => {
+                if (other !== item) {
+                    other.classList.remove('mobile-active');
+                }
+            });
+
+            // Toggle this item
+            item.classList.toggle('mobile-active');
+        });
+    });
+
+    // Close when tapping outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.portfolio-item')) {
+            portfolioItems.forEach(item => {
+                item.classList.remove('mobile-active');
+            });
+        }
     });
 }
 

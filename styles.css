@@ -685,6 +685,21 @@ body.loading {
     transform: scale(1);
 }
 
+/* Mobile tap to reveal */
+.portfolio-item.mobile-active .portfolio-overlay {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.portfolio-item.mobile-active .portfolio-logo {
+    transform: scale(0.9);
+    opacity: 0.2;
+}
+
+.portfolio-item.mobile-active .exit-badge {
+    opacity: 0;
+}
+
 .portfolio-overlay .company-name {
     font-size: 20px;
     font-weight: 600;
