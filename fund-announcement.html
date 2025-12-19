@@ -4,22 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fund Announcement - Layout Ventures</title>
+    <meta name="description" content="Layout Ventures Fund Announcement">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="announcement-styles.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
-<body>
+<body class="loading">
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <img src="Layout-Ventures-Logo-White.png" alt="Loading..." class="loader-logo">
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Grain Texture Overlay -->
+    <div class="grain-overlay"></div>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
+            <a href="index.html#hero">
+                <img src="Layout-Ventures-Logo-White.png" alt="Layout Ventures" class="header-logo">
+            </a>
             <nav class="nav">
                 <a href="index.html#hero" class="nav-link">Home</a>
-                <a href="index.html#pillars" class="nav-link">Approach</a>
+                <a href="index.html#pillars" class="nav-link">Strategy</a>
                 <a href="index.html#portfolio" class="nav-link">Portfolio</a>
                 <a href="index.html#team" class="nav-link">Team</a>
                 <a href="fund-announcement.html" class="nav-link">Fund Announcement</a>
             </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
+
+    <!-- Page Transition -->
+    <div class="page-transition"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-dot"></div>
 
     <!-- Announcement Hero -->
     <section class="announcement-hero">

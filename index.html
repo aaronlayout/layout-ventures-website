@@ -7,14 +7,28 @@
     <meta name="description" content="Unlocking the biggest missions impacting healthcare at the earliest stages">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-       <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
-       <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
-       <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
-<body>
+<body class="loading">
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <img src="Layout-Ventures-Logo-White.png" alt="Loading..." class="loader-logo">
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Grain Texture Overlay -->
+    <div class="grain-overlay"></div>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
+            <a href="#hero">
+                <img src="Layout-Ventures-Logo-White.png" alt="Layout Ventures" class="header-logo">
+            </a>
             <nav class="nav">
                 <a href="#hero" class="nav-link">Home</a>
                 <a href="#pillars" class="nav-link">Strategy</a>
@@ -22,11 +36,34 @@
                 <a href="#team" class="nav-link">Team</a>
                 <a href="fund-announcement.html" class="nav-link">Fund Announcement</a>
             </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
+    <!-- Page Transition -->
+    <div class="page-transition"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-dot"></div>
+
     <!-- Hero Section -->
     <section class="hero" id="hero">
+        <!-- Particle Network Canvas -->
+        <canvas id="particle-canvas"></canvas>
+        <!-- Animated background elements -->
+        <div class="hero-grid"></div>
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+        <div class="hero-ring hero-ring-1"></div>
+        <div class="hero-ring hero-ring-2"></div>
+        <div class="hero-ring hero-ring-3"></div>
+
         <div class="container">
             <div class="hero-logo-top">
                 <img src="Layout-Ventures-Logo-White.png" alt="Layout Ventures">
@@ -38,6 +75,7 @@
 
     <!-- Three Pillars Section -->
     <section class="pillars" id="pillars">
+        <div class="pillars-bg"></div>
         <div class="container">
             <div class="pillars-grid">
                 <div class="pillar-card">
@@ -58,9 +96,10 @@
 
     <!-- Portfolio Section -->
     <section class="portfolio" id="portfolio">
+        <div class="portfolio-dots"></div>
         <div class="container">
             <h2 class="section-title">Portfolio</h2>
-            
+
             <!-- Current Portfolio -->
             <div class="portfolio-grid">
                 <div class="portfolio-item">
@@ -78,7 +117,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item">
                     <div class="portfolio-logo">
                         <img src="stackpack.png" alt="Stackpack">
@@ -94,7 +133,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item">
                     <div class="portfolio-logo">
                         <img src="Branch_Logo_Small_Icon_Dark_Green.svg" alt="Branch Care">
@@ -110,7 +149,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item">
                     <div class="portfolio-logo">
                         <img src="stealth_startup_51_logo.jpeg" alt="Stealth Company">
@@ -119,7 +158,7 @@
                         <p class="company-description">Utilization management with outcome-focused care</p>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item">
                     <div class="portfolio-logo">
                         <img src="stealth_startup_51_logo.jpeg" alt="Stealth Company">
@@ -148,7 +187,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item">
                     <div class="portfolio-logo">
                         <img src="SafeRide_Health_Logo-FULL.png" alt="SafeRide Health">
@@ -164,7 +203,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item">
                     <div class="portfolio-logo">
                         <img src="Ostro_logo.png" alt="Ostro">
@@ -180,7 +219,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item exited">
                     <div class="exit-badge">Exited</div>
                     <div class="portfolio-logo">
@@ -197,7 +236,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item exited">
                     <div class="exit-badge">Exited</div>
                     <div class="portfolio-logo">
@@ -220,6 +259,7 @@
 
     <!-- Team Section -->
     <section class="team" id="team">
+        <div class="team-mesh"></div>
         <div class="container">
             <h2 class="section-title">Team</h2>
             <div class="team-grid">
@@ -237,6 +277,22 @@
                 </div>
             </div>
             <p class="advisors-note">We have a number of advisors we can share.</p>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="contact-cta" id="contact">
+        <div class="container">
+            <p class="contact-tagline">Building in Healthcare?</p>
+            <h2 class="contact-title">Let's Talk</h2>
+            <p class="contact-subtitle">We're always looking to meet founders building the future of healthcare technology.</p>
+            <a href="mailto:aszekel@gmail.com" class="contact-button">
+                Get in Touch
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
         </div>
     </section>
 
