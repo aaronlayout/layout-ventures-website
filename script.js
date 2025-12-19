@@ -19,44 +19,11 @@ window.addEventListener('load', () => {
 });
 
 // =============================================
-// Text Reveal Animation
+// Text Reveal Animation (disabled - using CSS animation instead)
 // =============================================
 function initTextReveal() {
-    const heroTitle = document.querySelector('.hero-title');
-    if (!heroTitle) return;
-
-    const html = heroTitle.innerHTML;
-    // Split by <br> first, then by spaces within each line
-    const lines = html.split(/<br\s*\/?>/i);
-
-    heroTitle.innerHTML = '';
-    heroTitle.style.opacity = '1';
-    heroTitle.style.transform = 'none';
-
-    let wordIndex = 0;
-
-    lines.forEach((line, lineIndex) => {
-        const words = line.trim().split(/\s+/).filter(word => word !== '');
-
-        words.forEach((word, i) => {
-            const wrapper = document.createElement('span');
-            wrapper.className = 'word-reveal';
-            wrapper.style.display = 'inline-block';
-            wrapper.style.marginRight = '0.3em';
-
-            const inner = document.createElement('span');
-            inner.textContent = word;
-            inner.style.animationDelay = `${wordIndex * 0.06}s`;
-            wrapper.appendChild(inner);
-            heroTitle.appendChild(wrapper);
-            wordIndex++;
-        });
-
-        // Add line break between lines (but not after the last line)
-        if (lineIndex < lines.length - 1) {
-            heroTitle.appendChild(document.createElement('br'));
-        }
-    });
+    // Just let the CSS animation handle it
+    return;
 }
 
 // =============================================
