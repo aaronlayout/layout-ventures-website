@@ -998,10 +998,10 @@ body.loading {
         0 0 0 1px rgba(0, 163, 184, 0.5);
     opacity: 0;
     transform: translateY(30px);
-    .contact-linkedin {
+   .contact-linkedin {
     display: flex;
     justify-content: center;
-    margin-top: 24px;
+    margin-top: 32px;
     opacity: 0;
     transform: translateY(30px);
 }
@@ -1012,21 +1012,25 @@ body.loading {
     justify-content: center;
     width: 52px;
     height: 52px;
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-green-dark));
     border-radius: 50%;
     color: var(--white);
     text-decoration: none;
     transition: all 0.4s var(--ease-out-expo);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 24px rgba(0, 163, 184, 0.35);
 }
 
 .contact-linkedin-link:hover {
-    background: linear-gradient(135deg, var(--primary-green), var(--primary-green-dark));
-    transform: translateY(-4px) scale(1.1);
+    background: linear-gradient(135deg, var(--primary-green-light), var(--primary-green));
+    transform: scale(1.2) rotate(10deg);
     box-shadow:
         0 12px 32px rgba(0, 163, 184, 0.45),
         0 0 40px rgba(0, 163, 184, 0.3);
+}
+
+.contact-linkedin-link svg {
+    width: 24px;
+    height: 24px;
 }
 
 .contact-linkedin-link:focus {
