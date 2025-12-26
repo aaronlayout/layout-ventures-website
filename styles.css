@@ -582,7 +582,12 @@ body.loading {
 }
 
 .portfolio-grid.prior-investments {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+.prior-investments .portfolio-item {
+    min-width: 140px;
 }
 
 .portfolio-item {
@@ -1177,8 +1182,9 @@ body.loading {
         gap: 20px;
     }
 
-    .portfolio-grid.prior-investments {
-        grid-template-columns: repeat(2, 1fr);
+   .portfolio-grid.prior-investments {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
     }
 
     .hero {
@@ -1450,8 +1456,13 @@ body.loading {
         gap: 16px;
     }
 
-    .portfolio-grid.prior-investments {
-        grid-template-columns: 1fr;
+.portfolio-grid.prior-investments {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .prior-investments .portfolio-item {
+        min-width: 120px;
     }
 
     .portfolio-item {
