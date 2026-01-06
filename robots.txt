@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aaronlayout.github.io/layout-ventures-website/sitemap.xml
+Sitemap: https://www.layoutventures.com/sitemap.xml
