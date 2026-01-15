@@ -293,42 +293,24 @@
             <p class="advisors-note">We have a number of advisors we can share.</p>
         </div>
     </section>
-
-    <!-- Contact CTA Section -->
-    <section class="contact-cta" id="contact">
-        <div class="container">
-            <p class="contact-tagline">Building in Healthcare?</p>
-            <h2 class="contact-title">Let's Talk</h2>
-            <p class="contact-subtitle">We're always looking to meet founders building the future of healthcare technology.</p>
-            <a href="mailto:hello@layoutventures.com" class="contact-button">
-                Get in Touch
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-            </a>
-        <div class="newsletter-form-container" style="margin-top: 60px;">
-                <form class="newsletter-form" action="https://app.loops.so/api/newsletter-form/cmjg8zc044whi0iyqall7v8i5" method="POST" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
-                    <input class="newsletter-form-input" placeholder="Newsletter Sign-Up - You Agree To Receive Occassional Emails from Layout Ventures" required="" type="email" name="newsletter-form-input" style="font-family: Inter, sans-serif; color: rgb(0, 0, 0); font-size: 14px; margin: 0px 0px 10px; width: 100%; max-width: 300px; min-width: 100px; background: rgb(255, 255, 255); border: 1px solid rgb(209, 213, 219); box-sizing: border-box; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; padding: 8px 12px;">
-                    <button type="submit" class="newsletter-form-button" style="background: rgb(0, 163, 184); font-size: 14px; color: rgb(255, 255, 255); font-family: Inter, sans-serif; display: flex; width: 100%; max-width: 300px; white-space: normal; height: 38px; align-items: center; justify-content: center; flex-direction: row; padding: 9px 17px; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; text-align: center; font-style: normal; font-weight: 500; line-height: 20px; border: none; cursor: pointer;">Sign Up - Layout Ventures Newsletter</button>
-                    <button type="button" class="newsletter-loading-button" style="background: rgb(0, 163, 184); font-size: 14px; color: rgb(255, 255, 255); font-family: Inter, sans-serif; display: none; width: 100%; max-width: 300px; white-space: normal; height: 38px; align-items: center; justify-content: center; flex-direction: row; padding: 9px 17px; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; text-align: center; font-style: normal; font-weight: 500; line-height: 20px; border: none; cursor: pointer;">Please wait...</button>
-                </form>
-                <div class="newsletter-success" style="display: none; align-items: center; justify-content: center; width: 100%;">
-                    <p class="newsletter-success-message" style="font-family: Inter, sans-serif; color: rgb(255, 255, 255); font-size: 14px;">Thanks! We're Excited To Have You As Part of Our Community!</p>
-                </div>
-                <div class="newsletter-error" style="display: none; align-items: center; justify-content: center; width: 100%;">
-                    <p class="newsletter-error-message" style="font-family: Inter, sans-serif; color: rgb(185, 28, 28); font-size: 14px;">Oops! Something went wrong, please try again</p>
-                </div>
-                <button class='newsletter-back-button' type='button' style='color:#9ca3af;font: 14px, Inter, sans-serif;margin:10px auto;text-align:center;display:none;background:transparent;border:none;cursor:pointer' onmouseout='this.style.textDecoration="none"' onmouseover='this.style.textDecoration="underline"'>&larr; Back</button>
-            </div>    
-        </div>
-    </div>
-</section>
-
     
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
+            <div class="footer-newsletter">
+                <form class="newsletter-form" action="https://app.loops.so/api/newsletter-form/cmjg8zc044whi0iyqall7v8i5" method="POST">
+                    <input class="newsletter-form-input" placeholder="Subscribe to our newsletter" required type="email" name="newsletter-form-input">
+                    <button type="submit" class="newsletter-form-button">Sign Up</button>
+                    <button type="button" class="newsletter-loading-button" style="display: none;">Please wait...</button>
+                </form>
+                <div class="newsletter-success" style="display: none;">
+                    <p class="newsletter-success-message">Thanks! We're excited to have you as part of our community!</p>
+                </div>
+                <div class="newsletter-error" style="display: none;">
+                    <p class="newsletter-error-message">Oops! Something went wrong, please try again</p>
+                </div>
+                <button class='newsletter-back-button' type='button' style='display:none'>&larr; Back</button>
+            </div>
             <p>&copy; 2024 Layout Ventures. All rights reserved.</p>
         </div>
     </footer>
