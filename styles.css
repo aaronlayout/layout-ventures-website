@@ -685,6 +685,20 @@ body.loading {
     transform: scale(0.9);
 }
 
+.acquired-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.55rem;
+    padding: 3px 7px;
+    border-radius: 4px;
+    letter-spacing: 0.03em;
+    pointer-events: none;
+    z-index: 2;
+}
+
 .portfolio-item:hover .portfolio-overlay {
     opacity: 1;
     transform: scale(1);
