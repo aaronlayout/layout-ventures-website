@@ -134,3 +134,31 @@ a.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(8,84,102,.12
 .footer-bottom{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:14px;color:rgba(255,255,255,.7);border-top:1px solid rgba(255,255,255,.12);padding-top:24px}
 .footer-bottom a{color:rgba(255,255,255,.7)}
 .footer-bottom a:hover{color:#fff}
+
+/* Portfolio table */
+.pf-table{border-top:1px solid var(--ink)}
+.pf-row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,2.4fr) minmax(0,1.3fr);gap:24px;padding:22px 12px;border-bottom:1px solid var(--line);color:var(--ink);align-items:baseline;transition:background .15s ease}
+a.pf-row:hover{background:#fff;color:var(--ink)}
+a.pf-row:hover .pf-name{color:var(--teal)}
+.pf-head{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--deep);padding-top:14px;padding-bottom:14px}
+.pf-name{font-family:var(--serif);font-weight:400;font-size:clamp(20px,1.8vw,24px);letter-spacing:-.01em;line-height:1.2;color:var(--ink);transition:color .15s ease}
+.pf-row.stealth .pf-name{color:var(--text);font-style:italic}
+.pf-arrow{font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:14px;color:var(--deep)}
+.pf-desc{font-size:16px;line-height:1.5;color:var(--text);text-wrap:pretty}
+.pf-founders{font-size:15px;line-height:1.5;color:var(--ink)}
+@media (max-width:899px){
+  .pf-head{display:none}
+  .pf-row{grid-template-columns:1fr;gap:6px;padding:20px 4px}
+  .pf-founders{color:var(--text);font-size:14px}
+}
+
+section[id],footer[id]{scroll-margin-top:74px}
+.section.gray a.pf-row:hover{background:var(--paper)}
+
+.pf-table{container-type:inline-size}
+@media (min-width:900px){
+  .pf-row{grid-template-columns:120px minmax(0,1fr) 190px;column-gap:24px;align-items:baseline}
+  .pf-name{font-size:19px;white-space:nowrap}
+  .pf-desc{white-space:nowrap;font-size:min(14px,calc((100cqw - 385px) / 43))}
+  .pf-founders{font-size:12px;white-space:nowrap}
+}

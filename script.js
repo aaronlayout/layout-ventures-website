@@ -7,6 +7,18 @@ document.addEventListener('DOMContentLoaded', function () {
     toggle.textContent = open ? 'Close' : 'Menu';
   });
 
+  // Close mobile menu after tapping a section link; highlight current section
+  var links = nav ? nav.querySelectorAll('a[href^="#"]') : [];
+  links.forEach(function (a) { a.addEventListener('click', function () {
+    if (nav.classList.contains('open')) { nav.classList.remove('open'); toggle.setAttribute('aria-expanded', false); toggle.textContent = 'Menu'; }
+  }); });
+  if (links.length && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id); }); });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    links.forEach(function (a) { var t = document.querySelector(a.getAttribute('href')); if (t) io.observe(t); });
+  }
+
   // Loops newsletter (same endpoint as the current site)
   var form = document.querySelector('.newsletter-form');
   var msg = document.querySelector('.newsletter-msg');
