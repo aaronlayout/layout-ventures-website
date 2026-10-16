@@ -8,6 +8,9 @@ img{display:block}
 a{color:var(--deep);text-decoration:none}
 a:hover{color:var(--teal)}
 .wrap{max-width:1280px}
+@media (min-width:1600px){.wrap{max-width:1440px}}
+@media (min-width:2000px){html{zoom:1.2}}
+@media (min-width:2400px){html{zoom:1.35}}
 .eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;color:var(--deep)}
 .masthead .eyebrow,.dark .eyebrow{color:var(--tint)}
 
