@@ -160,8 +160,8 @@ section[id],footer[id]{scroll-margin-top:74px}
 
 .pf-table{container-type:inline-size}
 @media (min-width:900px){
-  .pf-row{grid-template-columns:120px minmax(0,1fr) 190px;column-gap:24px;align-items:baseline}
+  .pf-row{grid-template-columns:120px minmax(0,1fr) 210px;column-gap:24px;align-items:baseline}
   .pf-name{font-size:19px;white-space:nowrap}
-  .pf-desc{white-space:nowrap;font-size:min(14px,calc((100cqw - 385px) / 43))}
+  .pf-desc{white-space:nowrap;font-size:min(14px,calc((100cqw - 405px) / 43))}
   .pf-founders{font-size:12px;white-space:nowrap}
 }
