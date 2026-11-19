@@ -38,7 +38,7 @@ a:hover{color:var(--teal)}
 /* Hero + mastheads */
 .hero{background:var(--deep);color:#fff;padding:clamp(80px,13vh,150px) var(--pad) clamp(64px,8vw,120px);min-height:auto;display:flex;flex-direction:column;justify-content:flex-end}
 .hero-rule{width:56px;height:2px;background:var(--teal);margin-bottom:36px}
-.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(46px,5.6vw,96px);line-height:1.04;letter-spacing:-.022em;margin:0 0 56px;max-width:1500px;text-wrap:balance}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(46px,5.6vw,96px);line-height:1.04;letter-spacing:-.022em;margin:0 0 clamp(64px,7vw,112px);max-width:1500px;text-wrap:balance}
 .hero p{font-size:clamp(17px,1.35vw,21px);line-height:1.55;max-width:620px;margin:0;color:rgba(255,255,255,.9);text-wrap:pretty}
 .masthead{background:var(--deep);color:#fff;padding:clamp(72px,11vw,160px) var(--pad) clamp(56px,7vw,96px)}
 .masthead .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
@@ -162,9 +162,9 @@ a.pf-row:hover .pf-name{color:var(--teal)}
 
 /* Terms strip (hero) */
 .terms{display:grid;grid-template-columns:minmax(0,.55fr) minmax(0,1.2fr) minmax(0,2fr);gap:clamp(24px,3.5vw,64px);margin:0;padding:0;max-width:1500px}
-.term{border-top:1px solid rgba(255,255,255,.22);padding-top:16px;display:flex;flex-direction:column;gap:8px}
+.term{border-top:2px solid var(--teal);padding-top:18px;display:flex;flex-direction:column;gap:10px}
 .term dt{font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--tint)}
-.term dd{margin:0;font-family:var(--serif);font-weight:300;font-size:clamp(21px,2vw,32px);line-height:1.4;letter-spacing:.005em;color:rgba(255,255,255,.88);text-wrap:pretty}
+.term dd{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(18px,1.45vw,23px);line-height:1.4;letter-spacing:.005em;color:#fff;text-wrap:pretty}
 @media (max-width:760px){.terms{grid-template-columns:1fr}}
 
 /* Focus statement */
@@ -200,7 +200,7 @@ section[id],footer[id]{scroll-margin-top:74px}
   .hero-rule{margin-bottom:24px}
   .hero h1{font-size:clamp(38px,10vw,44px);margin-bottom:32px}
   .terms{gap:16px}
-  .term dd{font-size:21px}
+  .term dd{font-size:19px}
   .section{padding-top:56px;padding-bottom:56px}
   .focus-line{font-size:24px;line-height:1.35}
   .focus-mail{font-size:16px;margin-top:20px;word-break:break-all}
