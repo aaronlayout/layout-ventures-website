@@ -27,7 +27,7 @@ a:hover{color:var(--teal)}
 /* Hero + mastheads */
 .hero{background:var(--deep);color:#fff;padding:clamp(80px,14vh,180px) var(--pad) clamp(64px,9vw,128px);min-height:82vh;display:flex;flex-direction:column;justify-content:flex-end}
 .hero-rule{width:56px;height:2px;background:var(--teal);margin-bottom:36px}
-.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(30px,2.9vw,42px);line-height:1.12;letter-spacing:-.015em;margin:0 0 36px;max-width:780px;text-wrap:balance}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(36px,3.8vw,58px);line-height:1.08;letter-spacing:-.02em;margin:0 0 40px;max-width:1040px;text-wrap:balance}
 .hero p{font-size:clamp(17px,1.35vw,21px);line-height:1.55;max-width:620px;margin:0;color:rgba(255,255,255,.9);text-wrap:pretty}
 .masthead{background:var(--deep);color:#fff;padding:clamp(72px,11vw,160px) var(--pad) clamp(56px,7vw,96px)}
 .masthead .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
@@ -157,7 +157,7 @@ a.pf-row:hover .pf-name{color:var(--teal)}
 @media (max-width:760px){.terms{grid-template-columns:1fr}}
 
 /* Focus statement */
-.focus-line{font-family:var(--serif);font-weight:300;font-size:clamp(19px,1.6vw,24px);line-height:1.45;letter-spacing:-.015em;max-width:1120px;margin:24px 0 0;color:var(--ink);text-wrap:pretty}
+.focus-line{font-family:var(--serif);font-weight:300;font-size:clamp(22px,2vw,30px);line-height:1.4;letter-spacing:-.015em;max-width:1120px;margin:24px 0 0;color:var(--ink);text-wrap:pretty}
 .focus-line b{font-weight:400;color:var(--deep)}
 .focus-line .cta{display:block;margin-top:.6em;color:var(--deep)}
 .focus-mail{display:inline-block;margin-top:28px;font-size:17px;font-weight:600;color:var(--deep);border-bottom:1px solid var(--teal);padding-bottom:4px}
@@ -187,11 +187,11 @@ section[id],footer[id]{scroll-margin-top:74px}
   .header-logo{height:28px}
   .hero{min-height:auto;padding-top:72px;padding-bottom:56px}
   .hero-rule{margin-bottom:24px}
-  .hero h1{font-size:29px;margin-bottom:26px}
+  .hero h1{font-size:33px;margin-bottom:28px}
   .terms{gap:16px}
   .term dd{font-size:16px}
   .section{padding-top:56px;padding-bottom:56px}
-  .focus-line{font-size:19px;line-height:1.48}
+  .focus-line{font-size:21px;line-height:1.42}
   .focus-mail{font-size:16px;margin-top:20px;word-break:break-all}
   .section-title{font-size:27px;margin-bottom:20px}
   .pf-row{padding:14px 0}
